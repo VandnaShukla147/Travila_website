@@ -1,0 +1,4 @@
+.fade-in {
+  @apply transition-opacity duration-500 ease-in;
+}
+

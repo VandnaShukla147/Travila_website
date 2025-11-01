@@ -1,0 +1,252 @@
+<section class="bg-[#E4F9F9] px-6 py-20">
+    <div class="max-w-7xl mx-auto">
+      <!-- Section Header -->
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-10 gap-4">
+        <div>
+          <h2 class="text-4xl font-bold">Recent Launched Car</h2>
+          <p class="text-gray-600 text-sm mt-2">The world's leading car brands</p>
+        </div>
+        <div class="flex gap-3">
+          <button id="carPrevBtn" class="px-3 py-2 rounded-full bg-white shadow hover:bg-gray-100 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button id="carNextBtn" class="px-3 py-2 rounded-full bg-white shadow hover:bg-gray-100 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Cards Grid -->
+      <div id="carsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card Template -->
+        <div class="relative rounded-2xl overflow-visible hover:shadow-2xl transition">
+          <div class="relative rounded-2xl overflow-hidden pb-28">
+            <img src="assets/images/audi.webp" alt="Audi" class="w-full h-[320px] object-cover rounded-2xl">
+            <button class="absolute top-3 right-3 bg-white rounded-full p-2 shadow hover:scale-105 transition">
+              <img src="assets/images/heart.webp" class="h-4 w-4" alt="heart">
+            </button>
+
+            <!-- Rating positioned between image and box -->
+            <div class="absolute -bottom-8 left-5">
+              <img src="assets/images/rating1.webp" alt="Rating" class="h-6 w-auto object-contain drop-shadow-lg">
+            </div>
+
+            <!-- Floating Box (unchanged position) -->
+            <div class="absolute -bottom-16 left-0 right-0 bg-white rounded-2xl p-6 shadow-xl border-b-4 border-l-2 border-r-2 border-gray-300 min-h-[180px]">
+              <h3 class="text-lg font-semibold mb-1 mt-4">Audi A3 1.6 TDI S line</h3>
+              <p class="text-gray-500 text-sm mb-3 flex items-center gap-1">
+                <img src="assets/images/location.webp" class="h-4 w-4" alt="Location">
+                Manchester, England
+              </p>
+              <div class="grid grid-cols-2 gap-3 mb-3 text-sm text-gray-600">
+                <div class="flex items-center gap-2">
+                  <img src="assets/images/mile.webp" class="h-4 w-4" alt="Mileage">
+                  <span>25,100 miles</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <img src="assets/images/automatic.webp" class="h-4 w-4" alt="Automatic">
+                  <span>Automatic</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <img src="assets/images/fuel.webp" class="h-4 w-4" alt="Fuel">
+                  <span>Diesel</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <img src="assets/images/seat.webp" class="h-4 w-4" alt="Seats">
+                  <span>7 seats</span>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-3 border-t border-gray-200">
+                <div>
+                  <span class="text-xl font-bold">$498.25</span>
+                  <span class="text-gray-500 text-sm"> / person</span>
+                </div>
+                <button class="px-5 py-2 bg-gray-600/30 text-white text-sm font-medium rounded-full hover:bg-gray-600/50 transition">
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repeat for audi2, audi3, audi4 -->
+        <div class="relative rounded-2xl overflow-visible hover:shadow-2xl transition">
+          <div class="relative rounded-2xl overflow-hidden pb-28">
+            <img src="assets/images/audi2.webp" alt="Audi" class="w-full h-[320px] object-cover rounded-2xl">
+            <button class="absolute top-3 right-3 bg-white rounded-full p-2 shadow hover:scale-105 transition">
+              <img src="assets/images/heart.webp" class="h-4 w-4" alt="heart">
+            </button>
+
+            <div class="absolute -bottom-8 left-5">
+              <img src="assets/images/rating1.webp" alt="Rating" class="h-6 w-auto object-contain drop-shadow-lg">
+            </div>
+
+            <div class="absolute -bottom-16 left-0 right-0 bg-white rounded-2xl p-6 shadow-xl border-b-4 border-l-2 border-r-2 border-gray-300 min-h-[180px]">
+              <h3 class="text-lg font-semibold mb-1 mt-4">Audi A3 1.6 TDI S line</h3>
+              <p class="text-gray-500 text-sm mb-3 flex items-center gap-1">
+                <img src="assets/images/location.webp" class="h-4 w-4" alt="Location">
+                Manchester, England
+              </p>
+              <div class="grid grid-cols-2 gap-3 mb-3 text-sm text-gray-600">
+                <div class="flex items-center gap-2">
+                  <img src="assets/images/mile.webp" class="h-4 w-4" alt="Mileage">
+                  <span>25,100 miles</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <img src="assets/images/automatic.webp" class="h-4 w-4" alt="Automatic">
+                  <span>Automatic</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <img src="assets/images/fuel.webp" class="h-4 w-4" alt="Fuel">
+                  <span>Diesel</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <img src="assets/images/seat.webp" class="h-4 w-4" alt="Seats">
+                  <span>7 seats</span>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-3 border-t border-gray-200">
+                <div>
+                  <span class="text-xl font-bold">$498.25</span>
+                  <span class="text-gray-500 text-sm"> / person</span>
+                </div>
+                <button class="px-5 py-2 bg-gray-600/30 text-white text-sm font-medium rounded-full hover:bg-gray-600/50 transition">
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="relative rounded-2xl overflow-visible hover:shadow-2xl transition">
+          <div class="relative rounded-2xl overflow-hidden pb-28">
+            <img src="assets/images/audi3.webp" alt="Audi" class="w-full h-[320px] object-cover rounded-2xl">
+            <button class="absolute top-3 right-3 bg-white rounded-full p-2 shadow hover:scale-105 transition">
+              <img src="assets/images/heart.webp" class="h-4 w-4" alt="heart">
+            </button>
+
+            <div class="absolute -bottom-8 left-5">
+              <img src="assets/images/rating1.webp" alt="Rating" class="h-6 w-auto object-contain drop-shadow-lg">
+            </div>
+
+            <div class="absolute -bottom-16 left-0 right-0 bg-white rounded-2xl p-6 shadow-xl border-b-4 border-l-2 border-r-2 border-gray-300 min-h-[180px]">
+              <h3 class="text-lg font-semibold mb-1 mt-4">Audi A3 1.6 TDI S line</h3>
+              <p class="text-gray-500 text-sm mb-3 flex items-center gap-1">
+                <img src="assets/images/location.webp" class="h-4 w-4" alt="Location">
+                Manchester, England
+              </p>
+              <div class="grid grid-cols-2 gap-3 mb-3 text-sm text-gray-600">
+                <div class="flex items-center gap-2">
+                  <img src="assets/images/mile.webp" class="h-4 w-4" alt="Mileage">
+                  <span>25,100 miles</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <img src="assets/images/automatic.webp" class="h-4 w-4" alt="Automatic">
+                  <span>Automatic</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <img src="assets/images/fuel.webp" class="h-4 w-4" alt="Fuel">
+                  <span>Diesel</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <img src="assets/images/seat.webp" class="h-4 w-4" alt="Seats">
+                  <span>7 seats</span>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-3 border-t border-gray-200">
+                <div>
+                  <span class="text-xl font-bold">$498.25</span>
+                  <span class="text-gray-500 text-sm"> / person</span>
+                </div>
+                <button class="px-5 py-2 bg-gray-600/30 text-white text-sm font-medium rounded-full hover:bg-gray-600/50 transition">
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="relative rounded-2xl overflow-visible hover:shadow-2xl transition">
+          <div class="relative rounded-2xl overflow-hidden pb-28">
+            <img src="assets/images/audi4.webp" alt="Audi" class="w-full h-[320px] object-cover rounded-2xl">
+            <button class="absolute top-3 right-3 bg-white rounded-full p-2 shadow hover:scale-105 transition">
+              <img src="assets/images/heart.webp" class="h-4 w-4" alt="heart">
+            </button>
+
+            <div class="absolute -bottom-8 left-5">
+              <img src="assets/images/rating1.webp" alt="Rating" class="h-6 w-auto object-contain drop-shadow-lg">
+            </div>
+
+            <div class="absolute -bottom-16 left-0 right-0 bg-white rounded-2xl p-6 shadow-xl border-b-4 border-l-2 border-r-2 border-gray-300 min-h-[180px]">
+              <h3 class="text-lg font-semibold mb-1 mt-4">Audi A3 1.6 TDI S line</h3>
+              <p class="text-gray-500 text-sm mb-3 flex items-center gap-1">
+                <img src="assets/images/location.webp" class="h-4 w-4" alt="Location">
+                New South Wales, Australia
+              </p>
+              <div class="grid grid-cols-2 gap-3 mb-3 text-sm text-gray-600">
+                <div class="flex items-center gap-2">
+                  <img src="assets/images/mile.webp" class="h-4 w-4" alt="Mileage">
+                  <span>25,100 miles</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <img src="assets/images/automatic.webp" class="h-4 w-4" alt="Automatic">
+                  <span>Automatic</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <img src="assets/images/fuel.webp" class="h-4 w-4" alt="Fuel">
+                  <span>Diesel</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <img src="assets/images/seat.webp" class="h-4 w-4" alt="Seats">
+                  <span>7 seats</span>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-3 border-t border-gray-200">
+                <div>
+                  <span class="text-xl font-bold">$498.25</span>
+                  <span class="text-gray-500 text-sm"> / person</span>
+                </div>
+                <button class="px-5 py-2 bg-gray-600/30 text-white text-sm font-medium rounded-full hover:bg-gray-600/50 transition">
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brand Logos Section -->
+      <div class="mt-20 flex flex-wrap justify-center gap-6">
+        <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition w-28 h-24 flex items-center justify-center">
+          <img src="assets/images/lexus.webp" alt="Lexus" class="h-8 object-contain">
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition w-28 h-24 flex items-center justify-center">
+          <img src="assets/images/mer.webp" alt="Mercedes" class="h-8 object-contain">
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition w-28 h-24 flex items-center justify-center">
+          <img src="assets/images/bugatti.webp" alt="Bugatti" class="h-8 object-contain">
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition w-28 h-24 flex items-center justify-center">
+          <img src="assets/images/jaguar.webp" alt="Jaguar" class="h-8 object-contain">
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition w-28 h-24 flex items-center justify-center">
+          <img src="assets/images/honda.webp" alt="Honda" class="h-8 object-contain">
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition w-28 h-24 flex items-center justify-center">
+          <img src="assets/images/chevrolet.webp" alt="Chevrolet" class="h-8 object-contain">
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition w-28 h-24 flex items-center justify-center">
+          <img src="assets/images/acura.webp" alt="Acura" class="h-8 object-contain">
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition w-28 h-24 flex items-center justify-center">
+          <img src="assets/images/toyota.webp" alt="Toyota" class="h-8 object-contain">
+        </div>
+      </div>
+    </div>
+  </section>

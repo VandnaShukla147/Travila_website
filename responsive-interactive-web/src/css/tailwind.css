@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ Scrollbar hiding globally */
+[data-track]::-webkit-scrollbar {
+  display: none;
+}
+[data-track] {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none;    /* Firefox */
+}
