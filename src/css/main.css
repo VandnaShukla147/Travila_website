@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ Scrollbar hiding globally */
+[data-track]::-webkit-scrollbar {
+  display: none;
+}
+[data-track] {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+
+/* Components */
+.btn-primary {
+  @apply bg-yellow-400 text-black px-4 py-2 rounded-full font-semibold;
+}
+
+.btn-primary:hover {
+  @apply bg-yellow-500;
+}
+
+/* Utilities */
+.fade-in {
+  @apply transition-opacity duration-500 ease-in;
+}

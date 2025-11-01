@@ -1,0 +1,37 @@
+{
+  "name": "travila-travel-platform",
+  "version": "1.0.0",
+  "description": "Travila is a comprehensive travel and tourism booking platform built with modern web technologies. The website provides a one-stop solution for travelers to book tours, hotels, car rentals, activities, and tickets through an intuitive, responsive interface.",
+  "main": "server.js",
+  "scripts": {
+  "dev": "tailwindcss -i ./src/css/main.css -o ./dist/output.css --watch",
+  "build:css": "tailwindcss -i ./src/css/main.css -o ./dist/output.css --minify",
+    "build": "npm run build:css && node scripts/build.js",
+    "start": "node server.js",
+    "dev:server": "nodemon server.js",
+    "seed": "node scripts/seedData.js"
+  },
+  "keywords": ["travel", "tourism", "booking", "mongodb", "express"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express-validator": "^7.0.1",
+    "multer": "^1.4.5-lts.1",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "html-minifier-terser": "^7.2.0",
+    "postcss": "^8.5.6",
+    "terser": "^5.36.0",
+    "tailwindcss": "^3.4.10",
+    "nodemon": "^3.0.2"
+  }
+}

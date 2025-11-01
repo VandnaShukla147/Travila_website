@@ -1,0 +1,237 @@
+<style>
+  .carousel-container {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .carousel-container::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+
+<section class="relative pt-28 pb-20"
+  style="background: url('assets/images/topratedbackground.png') center/cover no-repeat, #FFF0EC;">
+  <div class="absolute inset-0 bg-[#FFF0EC]/40"></div>
+
+<div class="relative z-10 max-w-7xl mx-auto px-6">
+  <!-- Header -->
+  <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12 gap-4">
+    <div>
+      <h2 class="text-4xl font-bold">Top Rated Hotels</h2>
+      <p class="text-gray-600 mt-2">Quality as judged by customers. Book at the ideal price!</p>
+    </div>
+    
+    <!-- Navigation Arrows -->
+    <div class="flex gap-3">
+      <button id="prevBtn" class="p-3 bg-gray-200 rounded-full shadow hover:bg-gray-300 transition">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+      </button>
+      <button id="nextBtn" class="p-3 bg-gray-200 rounded-full shadow hover:bg-gray-300 transition">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Carousel Container -->
+  <div class="relative overflow-hidden">
+    <div id="carousel" class="carousel-container flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4">
+      
+      <!-- Card 1 -->
+      <div class="min-w-[350px] max-w-[350px] snap-start shrink-0">
+        <div class="relative rounded-3xl overflow-visible hover:shadow-2xl transition">
+          <div class="relative rounded-3xl overflow-hidden pb-32">
+            <!-- Image -->
+            <img src="assets/images/california_sunset.png" alt="California Sunset" 
+                 class="w-full h-[280px] object-cover rounded-3xl">
+
+            <!-- Heart button -->
+            <button class="absolute top-4 right-4 bg-white rounded-full p-2.5 shadow-lg hover:scale-110 transition">
+              <svg class="h-5 w-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            </button>
+
+            <!-- Rating badge -->
+            <div class="absolute top-[240px] right-5 bg-white px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+              <span class="text-yellow-500">⭐</span>
+              <span class="text-sm font-bold">4.96</span>
+              <span class="text-xs text-gray-500">(672 reviews)</span>
+            </div>
+
+            <!-- Floating info box -->
+            <div class="absolute bottom-0 left-0 right-0 bg-white rounded-3xl p-6 shadow-xl border-2 border-gray-300">
+              <h3 class="text-xl font-bold leading-tight mb-2">California Sunset/Twilight Boat Cruise</h3>
+              
+              <!-- Location -->
+              <div class="flex items-center gap-2 text-gray-500 text-sm mb-1">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                <span>Manchester, England</span>
+              </div>
+
+              <!-- Stars -->
+              <div class="flex gap-0.5 mb-4">
+                <span class="text-black text-lg">★★★★★</span>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-2xl font-bold">$48.25 <span class="text-sm font-normal text-gray-500">/ person</span></p>
+                </div>
+                <button class="px-6 py-2.5 bg-black text-white text-sm rounded-lg hover:bg-gray-800 transition font-semibold">
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="min-w-[350px] max-w-[350px] snap-start shrink-0">
+        <div class="relative rounded-3xl overflow-visible hover:shadow-2xl transition">
+          <div class="relative rounded-3xl overflow-hidden pb-32">
+            <img src="assets/images/nyc_food.png" alt="NYC Food Tour" class="w-full h-[280px] object-cover rounded-3xl">
+            
+            <button class="absolute top-4 right-4 bg-white rounded-full p-2.5 shadow-lg hover:scale-110 transition">
+              <svg class="h-5 w-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            </button>
+
+            <div class="absolute top-[240px] right-5 bg-white px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+              <span class="text-yellow-500">⭐</span>
+              <span class="text-sm font-bold">4.96</span>
+              <span class="text-xs text-gray-500">(672 reviews)</span>
+            </div>
+
+            <div class="absolute bottom-0 left-0 right-0 bg-white rounded-3xl p-6 shadow-xl border-2 border-gray-300">
+              <h3 class="text-xl font-bold leading-tight mb-2">NYC: Food Tastings and Culture Tour</h3>
+              
+              <div class="flex items-center gap-2 text-gray-500 text-sm mb-1">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                <span>Manchester, England</span>
+              </div>
+
+              <div class="flex gap-0.5 mb-4">
+                <span class="text-black text-lg">★★★★★</span>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-2xl font-bold">$17.32 <span class="text-sm font-normal text-gray-500">/ person</span></p>
+                </div>
+                <button class="px-6 py-2.5 bg-black text-white text-sm rounded-lg hover:bg-gray-800 transition font-semibold">
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="min-w-[350px] max-w-[350px] snap-start shrink-0">
+        <div class="relative rounded-3xl overflow-visible hover:shadow-2xl transition">
+          <div class="relative rounded-3xl overflow-hidden pb-32">
+            <img src="assets/images/grand_canyon.png" alt="Grand Canyon" class="w-full h-[280px] object-cover rounded-3xl">
+            
+            <button class="absolute top-4 right-4 bg-white rounded-full p-2.5 shadow-lg hover:scale-110 transition">
+              <svg class="h-5 w-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            </button>
+
+            <div class="absolute top-[240px] right-5 bg-white px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+              <span class="text-yellow-500">⭐</span>
+              <span class="text-sm font-bold">4.96</span>
+              <span class="text-xs text-gray-500">(672 reviews)</span>
+            </div>
+
+            <div class="absolute bottom-0 left-0 right-0 bg-white rounded-3xl p-6 shadow-xl border-2 border-gray-300">
+              <h3 class="text-xl font-bold leading-tight mb-2">Grand Canyon Horseshoe Bend 2 days</h3>
+              
+              <div class="flex items-center gap-2 text-gray-500 text-sm mb-1">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                <span>Manchester, England</span>
+              </div>
+
+              <div class="flex gap-0.5 mb-4">
+                <span class="text-black text-lg">★★★★★</span>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-2xl font-bold">$15.63 <span class="text-sm font-normal text-gray-500">/ person</span></p>
+                </div>
+                <button class="px-6 py-2.5 bg-black text-white text-sm rounded-lg hover:bg-gray-800 transition font-semibold">
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 (duplicate for scrolling) -->
+      <div class="min-w-[350px] max-w-[350px] snap-start shrink-0">
+        <div class="relative rounded-3xl overflow-visible hover:shadow-2xl transition">
+          <div class="relative rounded-3xl overflow-hidden pb-32">
+            <img src="assets/images/california_sunset.png" alt="California Sunset" 
+                 class="w-full h-[280px] object-cover rounded-3xl">
+
+            <button class="absolute top-4 right-4 bg-white rounded-full p-2.5 shadow-lg hover:scale-110 transition">
+              <svg class="h-5 w-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            </button>
+
+            <div class="absolute top-[240px] right-5 bg-white px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+              <span class="text-yellow-500">⭐</span>
+              <span class="text-sm font-bold">4.96</span>
+              <span class="text-xs text-gray-500">(672 reviews)</span>
+            </div>
+
+            <div class="absolute bottom-0 left-0 right-0 bg-white rounded-3xl p-6 shadow-xl border-2 border-gray-300">
+              <h3 class="text-xl font-bold leading-tight mb-2">California Sunset/Twilight Boat Cruise</h3>
+              
+              <div class="flex items-center gap-2 text-gray-500 text-sm mb-1">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                <span>Manchester, England</span>
+              </div>
+
+              <div class="flex gap-0.5 mb-4">
+                <span class="text-black text-lg">★★★★★</span>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-2xl font-bold">$48.25 <span class="text-sm font-normal text-gray-500">/ person</span></p>
+                </div>
+                <button class="px-6 py-2.5 bg-black text-white text-sm rounded-lg hover:bg-gray-800 transition font-semibold">
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</section>

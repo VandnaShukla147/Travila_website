@@ -1,0 +1,45 @@
+<!-- ✅ Hero Section -->
+<section id="hero-section" class="relative w-full h-[750px] bg-cover bg-center overflow-visible flex flex-col justify-center pb-40" style="background-image: url('assets/images/Background.png');">
+  <div class="absolute inset-0 bg-black/10"></div>
+
+  <!-- 🧭 Arrows Navigation -->
+  <div class="absolute left-[14%] transform -translate-x-1/2 bottom-[13rem] z-40 flex gap-3">
+    <button id="heroPrevBtn" aria-label="Previous" class="w-12 h-12 flex items-center justify-center bg-white/90 backdrop-blur rounded-full shadow-md hover:bg-white transition border border-gray-200">
+      <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <button id="heroNextBtn" aria-label="Next" class="w-12 h-12 flex items-center justify-center bg-white/90 backdrop-blur rounded-full shadow-md hover:bg-white transition border border-gray-200">
+      <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- ✅ Right Thumbnails -->
+  <div class="hidden lg:flex flex-col absolute right-6 top-[40%] -translate-y-1/2 space-y-4 z-40 translate-x-[-170px]">
+    <img src="assets/images/hero-thumb1.png" alt="Preview 1" class="w-56 h-36 object-cover rounded-lg border-2 border-yellow-400 shadow-lg hover:scale-105 transition-transform duration-300">
+    <img src="assets/images/hero-thumb2.png" alt="Preview 2" class="w-56 h-36 object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+    <img src="assets/images/hero-thumb3.png" alt="Preview 3" class="w-56 h-36 object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+  </div>
+
+  <!-- 🧭 Floating Search Box -->
+  <div id="search-box-container" class="absolute left-1/2 transform -translate-x-1/2 bottom-[-3rem] z-30 w-full max-w-6xl">
+    <!-- search-box.html will be injected here -->
+  </div>
+</section>
+
+<!-- Featured Tours Section -->
+<section class="max-w-6xl mx-auto px-6 pt-28 pb-20">
+  <div class="flex flex-col sm:flex-row justify-between items-center mb-10 gap-4">
+    <h2 class="text-4xl font-bold text-left w-full sm:w-auto">Our Featured Tours</h2>
+    <div class="flex flex-wrap justify-center sm:justify-end gap-3">
+      <button class="px-4 py-2 bg-gray-100 rounded-full text-sm hover:bg-gray-200 transition">Categories</button>
+      <button class="px-4 py-2 bg-gray-100 rounded-full text-sm hover:bg-gray-200 transition">Duration</button>
+      <button class="px-4 py-2 bg-gray-100 rounded-full text-sm hover:bg-gray-200 transition">Review / Rating</button>
+      <button class="px-4 py-2 bg-gray-100 rounded-full text-sm hover:bg-gray-200 transition">Price range</button>
+    </div>
+  </div>
+
+  <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" id="featured-tours"></div>
+</section>

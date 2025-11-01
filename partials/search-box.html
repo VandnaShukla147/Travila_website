@@ -1,0 +1,306 @@
+<!-- ✅ Clean & Positioned Search Box + Responsive Dropdowns (no CSS file changes) -->
+<div class="relative z-10 max-w-6xl mx-auto -ml-6" id="search-box-wrapper">
+  <div
+    class="relative w-full rounded-2xl bg-white
+           border-[1.5px] border-gray-300 ring-1 ring-black/5
+           shadow-[0_40px_110px_-18px_rgba(0,0,0,0.55)]
+           transition-all duration-300
+           hover:shadow-[0_55px_140px_-18px_rgba(0,0,0,0.6)]
+           hover:border-gray-400 p-6"
+  >
+    <!-- 🆘 Top Right Help Text -->
+    <div class="absolute top-6 right-10 flex items-center gap-1 text-xs text-gray-500">
+      <img src="assets/images/user.png" alt="User Icon" class="h-4 w-4 object-contain">
+      <span class="whitespace-nowrap">Need some help?</span>
+    </div>
+
+    <!-- ✨ Tabs Row -->
+    <div class="flex flex-wrap gap-3 pb-2">
+      <button class="px-5 py-2 bg-black text-white rounded-full text-sm font-medium">Tours</button>
+      <button class="px-5 py-2 bg-gray-100 rounded-full text-sm hover:bg-gray-200">Hotels</button>
+      <button class="px-5 py-2 bg-gray-100 rounded-full text-sm hover:bg-gray-200">Tickets</button>
+      <button class="px-5 py-2 bg-gray-100 rounded-full text-sm hover:bg-gray-200">Rental</button>
+      <button class="px-5 py-2 bg-gray-100 rounded-full text-sm hover:bg-gray-200">Activities</button>
+    </div>
+
+    <!-- 🧭 Search Form -->
+    <div class="flex flex-wrap items-center justify-between rounded-xl border border-gray-200/80 px-6 py-2 mt-6 bg-white">
+      <!-- 📍 Location -->
+      <div class="flex flex-col py-4 flex-1 min-w-[180px] relative">
+        <label class="text-[11px] uppercase tracking-wide text-gray-500 mb-2">Location</label>
+        <button type="button" class="flex items-center gap-2 w-full text-left" data-dropdown-toggle="location">
+          <img src="assets/images/location.png" alt="Location Icon" class="h-5 w-5 opacity-80">
+          <span class="text-sm font-medium text-gray-900 truncate" data-disable-suggestions="true" id="locationValue">New York, USA</span>
+          <img src="assets/images/drop_down.png" alt="Dropdown" class="h-3 w-3 ml-auto">
+        </button>
+        <!-- Location Dropdown -->
+        <div id="locationDropdown" class="absolute top-full left-0 mt-2 w-full max-w-sm bg-white border border-gray-200 rounded-2xl shadow-2xl p-4 hidden z-50">
+          <div class="relative">
+            <input id="locationInput" type="text" placeholder="Search city" class="w-full border border-gray-200 rounded-xl px-3 py-2 pr-8 text-sm focus:outline-none" />
+            <svg class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M10 18a8 8 0 100-16 8 8 0 000 16z"/></svg>
+          </div>
+          <div class="mt-3 max-h-56 overflow-y-auto divide-y divide-gray-100">
+            <button class="w-full text-left px-2 py-2 hover:bg-gray-50 rounded-lg text-sm city-option">New York, USA</button>
+            <button class="w-full text-left px-2 py-2 hover:bg-gray-50 rounded-lg text-sm city-option">Los Angeles, USA</button>
+            <button class="w-full text-left px-2 py-2 hover:bg-gray-50 rounded-lg text-sm city-option">London, UK</button>
+            <button class="w-full text-left px-2 py-2 hover:bg-gray-50 rounded-lg text-sm city-option">Paris, France</button>
+            <button class="w-full text-left px-2 py-2 hover:bg-gray-50 rounded-lg text-sm city-option">Tokyo, Japan</button>
+            <button class="w-full text-left px-2 py-2 hover:bg-gray-50 rounded-lg text-sm city-option">Sydney, Australia</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="hidden md:flex h-12 px-3">
+        <img src="assets/images/vertical.png" alt="Divider" class="h-full opacity-70 my-auto">
+      </div>
+
+      <!-- 📅 Check In -->
+      <div class="flex flex-col py-4 flex-1 min-w-[180px] relative">
+        <label class="text-[11px] uppercase tracking-wide text-gray-500 mb-2">Check In</label>
+        <button type="button" class="flex items-center gap-2 w-full text-left" data-dropdown-toggle="dates">
+          <img src="assets/images/calendar.png" alt="Calendar Icon" class="h-5 w-5 opacity-80">
+          <span class="text-sm font-medium text-gray-900" data-disable-suggestions="true" id="checkInValue">Add dates</span>
+          <img src="assets/images/drop_down.png" alt="Dropdown" class="h-3 w-3 ml-auto">
+        </button>
+      </div>
+
+      <!-- Divider -->
+      <div class="hidden md:flex h-12 px-3">
+        <img src="assets/images/vertical.png" alt="Divider" class="h-full opacity-70 my-auto">
+      </div>
+
+      <!-- 📆 Check Out -->
+      <div class="flex flex-col py-4 flex-1 min-w-[180px] relative">
+        <label class="text-[11px] uppercase tracking-wide text-gray-500 mb-2">Check Out</label>
+        <button type="button" class="flex items-center gap-2 w-full text-left" data-dropdown-toggle="dates">
+          <img src="assets/images/calendar.png" alt="Calendar Icon" class="h-5 w-5 opacity-80">
+          <span class="text-sm font-medium text-gray-900" data-disable-suggestions="true" id="checkOutValue">Add dates</span>
+          <img src="assets/images/drop_down.png" alt="Dropdown" class="h-3 w-3 ml-auto">
+        </button>
+        <!-- Date Range Dropdown (Airbnb-like) -->
+        <div id="datesDropdown" class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[min(95vw,48rem)] min-w-[560px] bg-white border border-gray-200 rounded-2xl shadow-2xl p-6 hidden z-50">
+          <div class="flex items-center justify-between mb-3">
+            <div class="text-sm font-semibold">Select dates</div>
+            <div class="flex items-center gap-2">
+              <button type="button" id="prevMonth" class="p-2 rounded-full hover:bg-gray-100" aria-label="Previous month">◀</button>
+              <button type="button" id="nextMonth" class="p-2 rounded-full hover:bg-gray-100" aria-label="Next month">▶</button>
+            </div>
+          </div>
+          <div id="calendars" class="grid grid-cols-1 sm:grid-cols-2 gap-10"></div>
+          <div class="flex items-center justify-between mt-3">
+            <button type="button" id="clearDates" class="text-sm text-gray-600 hover:text-gray-900">Clear</button>
+            <button type="button" id="applyDates" class="px-4 py-2 bg-black text-white rounded-full text-sm">Apply</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="hidden md:flex h-12 px-3">
+        <img src="assets/images/vertical.png" alt="Divider" class="h-full opacity-70 my-auto">
+      </div>
+
+      <!-- 👨‍👩‍👧 Guests -->
+      <div class="flex flex-col py-4 flex-1 min-w-[200px] relative">
+        <label class="text-[11px] uppercase tracking-wide text-gray-500 mb-2">Guest</label>
+        <button type="button" class="flex items-center gap-2 w-full text-left" data-dropdown-toggle="guests">
+          <img src="assets/images/user.png" alt="Guest Icon" class="h-5 w-5 opacity-80">
+          <span class="text-sm font-medium text-gray-900 truncate" data-disable-suggestions="true" id="guestsValue">2 adults, 0 children</span>
+          <img src="assets/images/drop_down.png" alt="Dropdown" class="h-3 w-3 ml-auto">
+        </button>
+        <!-- Guests Dropdown -->
+        <div id="guestsDropdown" class="absolute top-full left-0 mt-2 w-full max-w-sm bg-white border border-gray-200 rounded-2xl shadow-2xl p-4 hidden z-50">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="text-sm font-medium">Adults</div>
+                <div class="text-xs text-gray-500">Ages 13 or above</div>
+              </div>
+              <div class="flex items-center gap-2">
+                <button type="button" class="counter-btn px-2 py-1 border rounded" data-target="adults" data-op="-">-</button>
+                <span id="adultsCount" class="w-6 text-center">2</span>
+                <button type="button" class="counter-btn px-2 py-1 border rounded" data-target="adults" data-op="+">+</button>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="text-sm font-medium">Children</div>
+                <div class="text-xs text-gray-500">Ages 2–12</div>
+              </div>
+              <div class="flex items-center gap-2">
+                <button type="button" class="counter-btn px-2 py-1 border rounded" data-target="children" data-op="-">-</button>
+                <span id="childrenCount" class="w-6 text-center">0</span>
+                <button type="button" class="counter-btn px-2 py-1 border rounded" data-target="children" data-op="+">+</button>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="text-sm font-medium">Infants</div>
+                <div class="text-xs text-gray-500">Under 2</div>
+              </div>
+              <div class="flex items-center gap-2">
+                <button type="button" class="counter-btn px-2 py-1 border rounded" data-target="infants" data-op="-">-</button>
+                <span id="infantsCount" class="w-6 text-center">0</span>
+                <button type="button" class="counter-btn px-2 py-1 border rounded" data-target="infants" data-op="+">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-end mt-4">
+            <button type="button" id="applyGuests" class="px-4 py-2 bg-black text-white rounded-full text-sm">Apply</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🔍 Search Button -->
+      <div class="px-6 py-4 flex-shrink-0 flex items-center justify-end">
+        <button class="bg-black text-white rounded-full px-6 py-3 text-sm font-medium hover:bg-gray-800 transition flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-4 w-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M10 18a8 8 0 100-16 8 8 0 000 16z" />
+          </svg>
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Inline script for lightweight dropdown logic (no external CSS changes) -->
+<script>
+  (function() {
+    const wrapper = document.getElementById('search-box-wrapper');
+    if (!wrapper) return;
+
+    // Generic dropdown toggle
+    wrapper.querySelectorAll('[data-dropdown-toggle]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = btn.getAttribute('data-dropdown-toggle');
+        const panel = document.getElementById(target + 'Dropdown');
+        if (!panel) return;
+        closeAll();
+        panel.classList.toggle('hidden');
+      });
+    });
+
+    function closeAll() {
+      ['locationDropdown','datesDropdown','guestsDropdown'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.add('hidden');
+      });
+    }
+
+    document.addEventListener('click', (e) => {
+      if (!wrapper.contains(e.target)) closeAll();
+    });
+
+    // Location selection
+    const locationValue = document.getElementById('locationValue');
+    const locationDropdown = document.getElementById('locationDropdown');
+    const locationInput = document.getElementById('locationInput');
+    if (locationDropdown) {
+      locationDropdown.querySelectorAll('.city-option').forEach(btn => {
+        btn.addEventListener('click', () => {
+          locationValue.textContent = btn.textContent.trim();
+          closeAll();
+        });
+      });
+      locationInput && locationInput.addEventListener('input', () => {
+        const q = locationInput.value.toLowerCase();
+        locationDropdown.querySelectorAll('.city-option').forEach(btn => {
+          btn.classList.toggle('hidden', !btn.textContent.toLowerCase().includes(q));
+        });
+      });
+    }
+
+    // Date range picker (minimal Airbnb-like)
+    const datesDropdown = document.getElementById('datesDropdown');
+    const calendars = document.getElementById('calendars');
+    const prevMonthBtn = document.getElementById('prevMonth');
+    const nextMonthBtn = document.getElementById('nextMonth');
+    const clearDates = document.getElementById('clearDates');
+    const applyDates = document.getElementById('applyDates');
+    const checkInValue = document.getElementById('checkInValue');
+    const checkOutValue = document.getElementById('checkOutValue');
+    let viewDate = new Date();
+    viewDate.setDate(1);
+    let startDate = null;
+    let endDate = null;
+
+    function format(d) {
+      return d ? d.toLocaleDateString(undefined, { day:'2-digit', month:'long', year:'numeric' }) : 'Add dates';
+    }
+
+    function sameDay(a,b){return a && b && a.toDateString()===b.toDateString();}
+    function between(d,a,b){return a && b && d> a && d < b;}
+
+    function renderCalendars(){
+      if (!calendars) return;
+      calendars.innerHTML = '';
+      const months = [new Date(viewDate), new Date(viewDate.getFullYear(), viewDate.getMonth()+1, 1)];
+      months.forEach(m => calendars.appendChild(renderMonth(m)));
+    }
+
+    function renderMonth(firstOfMonth){
+      const container = document.createElement('div');
+      const monthLabel = firstOfMonth.toLocaleDateString(undefined, { month:'long', year:'numeric' });
+      container.innerHTML = `<div class="text-sm font-semibold mb-2">${monthLabel}</div>`;
+      const grid = document.createElement('div');
+      grid.className = 'grid grid-cols-7 gap-1 text-center text-sm';
+      // Weekdays
+      'SMTWTFS'.split('').forEach(c=>{
+        const w=document.createElement('div');w.className='text-xs text-gray-400';w.textContent=c;grid.appendChild(w);
+      });
+      const startDay = new Date(firstOfMonth);
+      const firstWeekDay = startDay.getDay();
+      const daysInMonth = new Date(firstOfMonth.getFullYear(), firstOfMonth.getMonth()+1,0).getDate();
+      // Leading blanks
+      for(let i=0;i<firstWeekDay;i++){const b=document.createElement('div');grid.appendChild(b);}    
+      for(let d=1; d<=daysInMonth; d++){
+        const date = new Date(firstOfMonth.getFullYear(), firstOfMonth.getMonth(), d);
+        const btn = document.createElement('button');
+        btn.className = 'px-2 py-2 rounded hover:bg-gray-100';
+        if (sameDay(date,startDate) || sameDay(date,endDate)) btn.classList.add('bg-black','text-white','hover:bg-black');
+        else if (between(date,startDate,endDate)) btn.classList.add('bg-gray-200');
+        btn.textContent = String(d);
+        btn.addEventListener('click',()=>{
+          if (!startDate || (startDate && endDate)) { startDate = date; endDate = null; }
+          else if (date < startDate) { endDate = startDate; startDate = date; }
+          else { endDate = date; }
+          renderCalendars();
+        });
+        grid.appendChild(btn);
+      }
+      container.appendChild(grid);
+      return container;
+    }
+
+    if (datesDropdown){
+      renderCalendars();
+      prevMonthBtn.addEventListener('click', ()=>{viewDate.setMonth(viewDate.getMonth()-1); renderCalendars();});
+      nextMonthBtn.addEventListener('click', ()=>{viewDate.setMonth(viewDate.getMonth()+1); renderCalendars();});
+      clearDates.addEventListener('click', ()=>{startDate=null; endDate=null; renderCalendars(); checkInValue.textContent='Add dates'; checkOutValue.textContent='Add dates';});
+      applyDates.addEventListener('click', ()=>{
+        checkInValue.textContent = format(startDate);
+        checkOutValue.textContent = format(endDate);
+        closeAll();
+      });
+    }
+
+    // Guests logic
+    const counters = { adults: 2, children: 0, infants: 0 };
+    const guestsValue = document.getElementById('guestsValue');
+    wrapper.querySelectorAll('.counter-btn').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const target = btn.getAttribute('data-target');
+        const op = btn.getAttribute('data-op');
+        counters[target] = Math.max(0, counters[target] + (op==='+'?1:-1));
+        document.getElementById(target+'Count').textContent = counters[target];
+      });
+    });
+    const applyGuests = document.getElementById('applyGuests');
+    applyGuests && applyGuests.addEventListener('click',()=>{
+      guestsValue.textContent = `${counters.adults} adults, ${counters.children} children`;
+      closeAll();
+    });
+  })();
+</script>
